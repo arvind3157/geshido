@@ -1,0 +1,8 @@
+<%= form_tag '/text/process', method: :get do %>
+    <%= label_tag :input_text, 'Enter text:' %>
+    <%= text_field_tag :input_text %>
+    <%= submit_tag 'Submit' %>
+<% end %>
+  
+
+<%= @output_text %>
