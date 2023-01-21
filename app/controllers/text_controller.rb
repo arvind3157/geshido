@@ -14,7 +14,7 @@ class TextController < ApplicationController
                 }
                 )
         if @input_text.empty?
-            @output_text = "Enter the prompt!!"
+            @output_text = "Enter the prompt!"
         else
             @output_text = response["choices"][0]["text"]
         end

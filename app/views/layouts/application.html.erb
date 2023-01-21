@@ -11,7 +11,13 @@
   </head>
 
   <body>
+  <div class="d-flex flex-column" style="min-height: 100vh;">
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <div class="flex-grow-1">
+      <%= yield %>
+    </div>
+    <br />
+    <%= render 'layouts/footer' %>
+  </div>
   </body>
 </html>
