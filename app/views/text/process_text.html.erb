@@ -1,8 +1,11 @@
-<%= form_tag '/text/process', method: :get do %>
-    <%= label_tag :input_text, 'Enter text:' %>
-    <%= text_field_tag :input_text %>
-    <%= submit_tag 'Submit' %>
-<% end %>
-  
+<div class="container">
+  <%= form_tag '/', method: :get, class: 'form-group' do %>
+    <div class="form-group">
+      <%= label_tag :input_text, 'Enter text:', class: 'control-label' %>
+      <%= text_area_tag :input_text, nil, class: 'form-control' %>
+    </div>
+    <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+  <% end %>
 
-<%= @output_text %>
+  <%= @output_text %>
+</div>
