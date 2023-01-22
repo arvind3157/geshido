@@ -6,6 +6,7 @@ ruby "3.0.0"
 gem 'bootstrap', '~> 4.2'
 gem 'figaro'
 gem "ruby-openai"
+gem 'devise'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
