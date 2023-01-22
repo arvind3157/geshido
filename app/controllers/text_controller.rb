@@ -1,6 +1,7 @@
 require "ruby/openai"
 
 class TextController < ApplicationController
+
     def process_text
         openai = OpenAI::Client.new(access_token:ENV["OPENAI_API_KEY"])
         @input_text = params[:input_text] || ""

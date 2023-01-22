@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   get '/text-to-text', to: 'text#process_text'
 
+  get '/about', to: 'home#about'
+
 end
