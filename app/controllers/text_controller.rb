@@ -6,7 +6,7 @@ class TextController < ApplicationController
         @input_text = params[:input_text] || ""
         response = openai.completions(
             parameters: {
-                model: "text-davinci-002",
+                model: "text-davinci-003",
                 prompt: @input_text,
                 temperature: 0.7,
                 max_tokens: 500,
