@@ -1,7 +1,6 @@
 require "ruby/openai"
 
 class TextController < ApplicationController
-
     def process_text
         openai = OpenAI::Client.new(access_token:ENV["OPENAI_API_KEY"])
         @input_text = params[:input_text] || ""
@@ -9,9 +8,8 @@ class TextController < ApplicationController
             parameters: {
                 model: "text-davinci-002",
                 prompt: @input_text,
-                temperature: 0.5,
+                temperature: 0.7,
                 max_tokens: 500,
-                stop: "."
                 }
                 )
         if @input_text.empty?
