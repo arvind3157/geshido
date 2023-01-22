@@ -1,7 +1,7 @@
 require "ruby/openai"
 
-module TextHelper
-    def process_text(params)
+class ProcessTextService
+    def self.process_text(params)
         openai = OpenAI::Client.new(access_token:ENV["OPENAI_API_KEY"])
         @input_text = params[:input_text] || ""
         response = openai.completions(
@@ -18,4 +18,4 @@ module TextHelper
             return response["choices"][0]["text"]
         end
     end
-end
+  end
